@@ -10,12 +10,13 @@ body::-webkit-scrollbar {
 section.spotlight {
   background: #fff;
   color: #333;
-  min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 0;
+  overflow: hidden;
 }
 div.light {
   display: flex;
@@ -93,7 +94,8 @@ div.particles {
   z-index: 2;
   overflow: hidden;
 }
-div.particles img {
+div.particles img,
+div.particles2 img {
   width: 100%;
   display: block;
 }
@@ -174,15 +176,15 @@ div.particles2 {
 }
 @keyframes move2 {
   0% {
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
   }
   90% {
-    transform: translateY(0px);
+    transform: translateY(-50px);
     opacity: 1;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-50px);
     transition: ease-out 1s;
     opacity: 0;
   }
@@ -254,7 +256,7 @@ div.particles2 {
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 810px) and (min-width: 300px) {
   section.spotlight {
     min-height: 100vh;
     min-width: 100vw;
@@ -269,14 +271,14 @@ div.particles2 {
     height: 56px;
     border-radius: 12px;
   }
-  .logo {
-    width: 100px;
+  div.logo {
+    width: 300px;
   }
   .logo img {
     width: 70%;
   }
   .initiative {
-    width: 90px;
+    width: 140px;
   }
 
   .hero {
@@ -297,24 +299,34 @@ div.particles2 {
     height: 240px;
     object-fit: cover;
   }
-
+  div.particles {
+    left: 0;
+    width: 100%;
+    height: 400px;
+  }
+  div.particles2 {
+    left: 0;
+    width: 100%;
+    height: 400px;
+  }
   .content-box {
     max-width: 100%;
     padding: 20px 12px;
     gap: 6px;
   }
   .main-logo {
-    width: 220px;
+    width: 300px;
     height: auto;
     margin: 0 auto 14px;
   }
   .description {
-    font-size: 0.7rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin: 0 0 8px;
+    margin: 20px 0;
   }
   .launch-text {
-    font-size: 1.4rem;
+    font-size: 2rem;
     line-height: 1.2;
   }
 }
