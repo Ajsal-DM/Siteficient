@@ -42,7 +42,7 @@ div.light img.left {
   width: 85%;
   z-index: 3;
   position: relative;
-  height: 72px;
+  height: 50px;
   top: 20px;
   display: flex;
   justify-content: space-between;
@@ -64,12 +64,20 @@ div.logo {
 }
 
 .initiative {
-  width: 150px;
+  display: flex;
+  width: 125px;
+  align-items: center;
+  justify-content: space-between;
+}
+.initiative span {
+  background-color: #fff;
+  font-size: 0.75rem;
+  width: 90px;
+  align-items: center;
 }
 
 .initiative img {
-  width: 100%;
-
+  width: 35px;
   display: block;
 }
 
@@ -119,7 +127,7 @@ div.particles2 {
   text-align: center;
   max-width: 1000px;
   padding: 40px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .main-logo {
@@ -141,7 +149,7 @@ div.particles2 {
 }
 
 .launch-text {
-  width: 80%;
+  width: 82%;
   font-size: 5.5rem;
   font-weight: bold;
   background: linear-gradient(90deg, #3b2a21, #ef5e14, #3b2a21);
@@ -163,7 +171,7 @@ div.particles2 {
 @keyframes move {
   0% {
     transform: translateY(100px);
-    opacity: 0;
+    opacity: 1;
   }
   90% {
     transform: translateY(-100px);
@@ -178,7 +186,7 @@ div.particles2 {
 @keyframes move2 {
   0% {
     transform: translateY(50px);
-    opacity: 0;
+    opacity: 1;
   }
   90% {
     transform: translateY(-50px);
@@ -208,7 +216,7 @@ div.particles2 {
     width: 170px;
   }
   .initiative {
-    width: 130px;
+    width: 125px;
   }
 
   .hero {
@@ -260,6 +268,36 @@ div.particles2 {
 }
 
 @media (max-width: 810px) and (min-width: 300px) {
+  @keyframes move {
+    0% {
+      transform: translateY(250px);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10px);
+      transition: ease-out 1s;
+      opacity: 0;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      transform: translateY(350px);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0px);
+      transition: ease-out 1s;
+      opacity: 0;
+    }
+  }
   section.spotlight {
     min-height: 100vh;
     min-width: 100vw;
@@ -281,7 +319,7 @@ div.particles2 {
     width: 70%;
   }
   .initiative {
-    width: 140px;
+    width: 125px;
   }
 
   .hero {
@@ -306,15 +344,17 @@ div.particles2 {
     left: 0;
     width: 100%;
     height: 400px;
+    z-index: 1000;
   }
   div.particles2 {
     left: 0;
     width: 100%;
     height: 400px;
+    z-index: 1000;
   }
   .content-box {
-    max-width: 100%;
-    padding: 20px 12px;
+    width: 100%;
+    padding: 20px 0;
     gap: 6px;
   }
   .main-logo {
@@ -323,14 +363,14 @@ div.particles2 {
     margin: 0 auto 14px;
   }
   .description {
-    width: 280px;
+    min-width: 280px;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0 0 8px;
     margin: 20px 0;
   }
   .launch-text {
-    width: 100%;
+    min-width: 100%;
     font-size: 1.9rem;
     line-height: 1.2;
   }
